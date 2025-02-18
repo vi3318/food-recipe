@@ -18,6 +18,7 @@ X_ingredients = vectorizer.fit_transform(data['ingredients_list'].fillna(""))
 # Train KNN Model
 knn = NearestNeighbors(n_neighbors=5, metric='cosine')
 knn.fit(X_ingredients)
+print("model trained")
 
 def recommend_recipes(ingredients):
     input_ingredients_transformed = vectorizer.transform([ingredients])
