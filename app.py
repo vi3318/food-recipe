@@ -47,7 +47,7 @@ ingredients_input = st.text_area("Enter ingredients you have (comma-separated):"
 if st.button("🔍 Find Recipes"):
     if ingredients_input.strip():
         recommendations = recommend_recipes(ingredients_input)
-        st.subheader("🍽️ Recommended Recipes")
+        st.subheader("🍽️ Recommjgended Recipes")
         for _, row in recommendations.iterrows():
             st.markdown(f"### {row['recipe_name']}")
             st.write(f"**Calories:** {row['calories']}")
